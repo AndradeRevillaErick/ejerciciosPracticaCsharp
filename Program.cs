@@ -4,7 +4,12 @@
         // ParInpar(12);
         // ClasificaNumero(0);
         // ClasificaTernario(-10);
-        Verifica(111);
+        // Verifica(111);
+        // ComparaCadenas("Hola", "HolA");
+        // DiaSemana(33);
+        // TipoFruta("peraa");
+        // UsandoGoto();
+        Saliendo();
     }
 
     static void MayorQueDiez(int numero){
@@ -47,5 +52,82 @@
             return;
         } 
         Console.WriteLine("Nel");
+    }
+
+    static void ComparaCadenas(string primera, string segunda){
+        if(primera == segunda){
+            Console.WriteLine("SI son");
+            return;
+        }
+            Console.WriteLine("NO son");
+    }
+
+    static void DiaSemana(int dia){
+        switch(dia){
+            case 1:
+            Console.WriteLine("Lunes");
+            break;
+            case 2:
+            Console.WriteLine("Martes");
+            break;
+            case 3:
+            Console.WriteLine("Miercoles");
+            break;
+            case 4:
+            Console.WriteLine("Jueves");
+            break;
+            case 5:
+            Console.WriteLine("Viernes");
+            break;
+            case 6:
+            Console.WriteLine("Sabado");
+            break;
+            case 7:
+            Console.WriteLine("Domingo");
+            break;
+            default:
+            Console.WriteLine("Noexiste no manches");
+            break;
+        }
+    }
+
+    static void TipoFruta(string fruta){
+        switch(fruta){
+            case "uva":
+            Console.WriteLine("es una uva");
+            break;
+            case "fresa":
+            Console.WriteLine("es una fresa");
+            break;
+            case "pera":
+            Console.WriteLine("es una pera");
+            break;
+            default:
+            Console.WriteLine("Noexiste no manches");
+            break;
+        }
+    }
+
+    static void UsandoGoto(){
+        Console.WriteLine("Iniciandoando");
+        goto salto;
+        Console.WriteLine("Me saltan a mi");
+        salto:
+        Console.WriteLine("llegando con goto");
+    }
+
+    static void Saliendo(){
+        for(int i = 0; i <= 15; i++){
+            if(i == 5){
+                Console.WriteLine("Continue se salta y pasa al siguiente elemento");
+                continue;
+            }
+            if(i == 11){
+                Console.WriteLine("Break se sale del bucle");
+                break;
+            }
+            Console.WriteLine(i);
+
+        }
     }
 }

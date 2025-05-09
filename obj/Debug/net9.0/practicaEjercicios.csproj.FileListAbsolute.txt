@@ -12,3 +12,4 @@ D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\De
 D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.pdb
 D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.genruntimeconfig.cache
 D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\ref\practicaEjercicios.dll
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.sourcelink.json
