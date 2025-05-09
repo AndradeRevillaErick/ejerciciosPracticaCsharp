@@ -1,0 +1,14 @@
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\bin\Debug\net9.0\practicaEjercicios.exe
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\bin\Debug\net9.0\practicaEjercicios.deps.json
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\bin\Debug\net9.0\practicaEjercicios.runtimeconfig.json
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\bin\Debug\net9.0\practicaEjercicios.dll
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\bin\Debug\net9.0\practicaEjercicios.pdb
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.GeneratedMSBuildEditorConfig.editorconfig
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.AssemblyInfoInputs.cache
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.AssemblyInfo.cs
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.csproj.CoreCompileInputs.cache
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.dll
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\refint\practicaEjercicios.dll
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.pdb
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\practicaEjercicios.genruntimeconfig.cache
+D:\erick\Documents\Derk\Sistemas\csharp\CsharpProjects\practicaEjercicios\obj\Debug\net9.0\ref\practicaEjercicios.dll
