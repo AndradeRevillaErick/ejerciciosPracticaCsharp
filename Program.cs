@@ -14,7 +14,11 @@
         // BucleWhile();
         // BucleDoWhile();
         // ForMultiplica();
-        UsoForEach();
+        // UsoBreak();
+        // SaliendoPar();
+        // BucleInfinito();
+        // Tablas();
+        QuieresSalir();
     }
 
     static void MayorQueDiez(int numero){
@@ -169,5 +173,54 @@
         foreach (int e in miArray) {
             Console.WriteLine(e);
         }
+    }
+
+    static void UsoBreak(){
+        for(int i = 0; i <= 15; i++){
+            if(i == 11){
+                Console.WriteLine("Break se sale del bucle");
+                break;
+            }
+            Console.WriteLine(i);
+
+        }
+    }
+
+    static void SaliendoPar(){
+        for(int i = 1; i <= 15; i++){
+            if(i  % 2 == 0){
+                Console.WriteLine("Saltando par");
+                continue;
+            }
+            Console.WriteLine(i);
+
+        }
+    }
+
+    static void BucleInfinito(){
+        for(int i = 0; i <= 10;) {
+            break;
+        }
+    }
+
+    static void Tablas(){
+        for(int i = 1; i <= 10; i++) {
+            for(int n = 1; n <= 10; n++) {
+                Console.WriteLine($"{i} x {n} = {i*n}");
+            }
+        }
+    }
+
+    static void QuieresSalir(){
+        string? alv = "n";
+
+        do{
+
+            Console.WriteLine("Nos vamos alv?");
+            alv = Console.ReadLine();
+
+        }while(alv != "s");
+
+        Console.WriteLine("Termino alv");
     }
 }
