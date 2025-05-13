@@ -9,7 +9,12 @@
         // DiaSemana(33);
         // TipoFruta("peraa");
         // UsandoGoto();
-        Saliendo();
+        // Saliendo();
+        // BucleFor();
+        // BucleWhile();
+        // BucleDoWhile();
+        // ForMultiplica();
+        UsoForEach();
     }
 
     static void MayorQueDiez(int numero){
@@ -128,6 +133,41 @@
             }
             Console.WriteLine(i);
 
+        }
+    }
+
+    static void BucleFor() {
+        for(int i = 1; i <= 10; i++) {
+            Console.WriteLine(i);
+        }
+    }
+
+    static void BucleWhile() {
+        int i = 1;
+        while(i <= 10){
+            Console.WriteLine(i);
+            i++;
+        }
+    }
+
+    static void BucleDoWhile() {
+        int i = 1;
+        do{
+            Console.WriteLine(i);
+            i++;
+        }while(i <= 10);
+    }
+
+    static void ForMultiplica() {
+        for(int i = 1; i <= 10; i++) {
+            Console.WriteLine($"{i} x {5} = {i*5}");
+        }
+    }
+
+    static void UsoForEach() {
+        int[] miArray = [1,2,3,4,5];
+        foreach (int e in miArray) {
+            Console.WriteLine(e);
         }
     }
 }
