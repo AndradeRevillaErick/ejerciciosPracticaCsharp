@@ -1,4 +1,6 @@
-﻿class PracticaEjercicios(){
+﻿using System.Diagnostics;
+
+class PracticaEjercicios(){
     static void Main(string[] args){
         // MayorQueDiez(11);
         // ParInpar(12);
@@ -31,7 +33,20 @@
         // Console.WriteLine(Suma(3,4));
         // Console.WriteLine(Cuadrado(3));
         // Saludo("pepe");
-        ParametrosNombrados(edad:12, nombre:"asda");
+        // ParametrosNombrados(edad:12, nombre:"asda");
+        // Console.WriteLine(Factorial(3));
+
+        // FuncionUno(2);
+        // FuncionUno("dos");
+
+        // ParametrosSalida(3, 6, out int salidaUno, out int salidaD);
+        // Console.WriteLine($"{salidaUno} Y {salidaD}");
+
+        // int numerito = 2;
+        // ReferenciaParametros(ref numerito);
+        // Console.WriteLine(numerito);
+
+        ParametroGenerico("cheto");
     }
 
     static void MayorQueDiez(int numero){
@@ -346,4 +361,38 @@ numeros.Sort();
         Console.WriteLine($"{nombre} {edad}");
 
     }
+
+    static int Factorial(int numero){
+        if (numero == 0) {
+            return 1;
+        } else {
+            return numero * Factorial(numero - 1);
+        }
+    }
+
+    static void FuncionUno(int a){
+        Console.WriteLine($"numero: {a}");
+
+    }
+
+    static void FuncionUno(string a){
+        Console.WriteLine($"string: {a}");
+
+    }
+
+    static void ParametrosSalida(int numeroUno, int nuemroDos, out int salidaUno, out int salidaDos){
+        salidaUno = numeroUno + nuemroDos;
+        salidaDos = numeroUno * nuemroDos;
+    }
+
+    static void ReferenciaParametros(ref int numero) {
+        numero += 11;
+    }
+
+    static void ParametroGenerico<T>(T valor){
+        Console.WriteLine($"es un {typeof(T)} y vale: {valor}");
+    }
 }
+
+
+
