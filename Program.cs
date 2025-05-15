@@ -27,7 +27,11 @@
         // RecorreLista();
         // SumaLista();
         // BuscaLista();
-        OrdenaLista();
+        // OrdenaLista();
+        // Console.WriteLine(Suma(3,4));
+        // Console.WriteLine(Cuadrado(3));
+        // Saludo("pepe");
+        ParametrosNombrados(edad:12, nombre:"asda");
     }
 
     static void MayorQueDiez(int numero){
@@ -322,5 +326,24 @@ numeros.Sort();
             Console.WriteLine(element);
         }
         
+    }
+
+    static int Suma(int a, int b){
+        return a + b;
+    }
+
+    static double Cuadrado(int a){
+        return Math.Pow(a, 2);
+        return a*a;
+    }
+
+    static void Saludo(string nombre = "madaka") {
+        Console.WriteLine($"hola {nombre}");
+    }
+
+    static void ParametrosNombrados(string nombre, int edad) {
+
+        Console.WriteLine($"{nombre} {edad}");
+
     }
 }
