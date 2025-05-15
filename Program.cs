@@ -390,7 +390,7 @@ numeros.Sort();
     }
 
     static void ParametroGenerico<T>(T valor){
-        Console.WriteLine($"es un {typeof(T)} y vale: {valor}");
+        Console.WriteLine($"es un {typeof(T).Name} y vale: {valor}");
     }
 }
 
