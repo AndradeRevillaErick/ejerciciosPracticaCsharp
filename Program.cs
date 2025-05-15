@@ -22,7 +22,12 @@
         // CreaArray();
         // SumaArray();
         // BuscaArray();
-        OrdenaArray();
+        // OrdenaArray();
+        // Lista();
+        // RecorreLista();
+        // SumaLista();
+        // BuscaLista();
+        OrdenaLista();
     }
 
     static void MayorQueDiez(int numero){
@@ -270,5 +275,52 @@ Console.WriteLine(simon);
         Console.WriteLine(String.Join(",", arreglo) );
         
 
+    }
+
+    static void Lista() {
+        List<int> numeros = [2,4,6,7];
+
+        Console.WriteLine(String.Join(",", numeros));
+    }
+
+    static void RecorreLista() {
+        List<int> numeros = [2,4,6,7];
+
+        foreach(int element in numeros){
+            Console.WriteLine(element);
+        }
+    }
+
+    static void SumaLista() {
+        List<int> numeros = [2,4,6,7];
+
+        int result = 0;
+
+        foreach(int element in numeros){
+            // Console.WriteLine(element);
+            result += element;
+        }
+
+        Console.WriteLine(result);
+    }
+
+    static void BuscaLista() {
+        List<int> numeros = [2,4,6,7];
+
+
+        Boolean simon = numeros.Contains(1);
+
+            Console.WriteLine(simon);
+        
+    }
+
+    static void OrdenaLista() {
+        List<int> numeros = [22,41,6,7, 1];
+
+numeros.Sort();
+        foreach(int element in numeros){
+            Console.WriteLine(element);
+        }
+        
     }
 }
