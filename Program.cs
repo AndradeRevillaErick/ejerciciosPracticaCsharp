@@ -18,7 +18,11 @@
         // SaliendoPar();
         // BucleInfinito();
         // Tablas();
-        QuieresSalir();
+        // QuieresSalir();
+        // CreaArray();
+        // SumaArray();
+        // BuscaArray();
+        OrdenaArray();
     }
 
     static void MayorQueDiez(int numero){
@@ -222,5 +226,49 @@
         }while(alv != "s");
 
         Console.WriteLine("Termino alv");
+    }
+
+    static void CreaArray() {
+        int[] arreglo = [1, 2, 3];
+
+        for(int i = 0; i < arreglo.Length; i++){
+            Console.WriteLine(arreglo[i]);
+        }
+
+    }
+
+
+    static void SumaArray() {
+        int[] arreglo = [1, 2, 3];
+        int resultado = 0;
+        for(int i = 0; i < arreglo.Length; i++){
+            // Console.WriteLine(arreglo[i]);
+            resultado += arreglo[i];
+        }
+
+        Console.WriteLine(resultado);
+
+    }
+
+    static void BuscaArray() {
+        int[] arreglo = [1, 2, 3];
+
+        Boolean simon = arreglo.Contains(5);
+
+Console.WriteLine(simon);
+        
+
+    }
+
+
+    static void OrdenaArray() {
+        int[] arreglo = [3, 7,5,4,2,45,5, 1,2,3];
+        Array.Sort(arreglo);
+
+        
+
+        Console.WriteLine(String.Join(",", arreglo) );
+        
+
     }
 }
