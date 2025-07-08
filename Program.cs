@@ -56,14 +56,37 @@ class PracticaEjercicios()
         //     Edad = 12
         // };
 
+        // Persona personita = new("qwqw", 1);
+        // personita.Nombre = "jajas";
+        // personita.Edad = -123;
+
         // Console.WriteLine(personita.Nombre);
         // Console.WriteLine(personita.Edad);
         // personita.Saludar();
 
-        Estudiante estud = new("asas", 12, "klkllk"); 
-        Console.WriteLine(estud.Nombre);
-        Console.WriteLine(estud.Edad);
-        Console.WriteLine(estud.Matricula);
+        // Estudiante estud = new("asas", 12, "klkllk");
+        // Console.WriteLine(estud.Nombre);
+        // Console.WriteLine(estud.Edad);
+        // Console.WriteLine(estud.Matricula);
+        // estud.Saludar();
+
+        // Cliente cliente = new Cliente("Mariano", 13);
+        // cliente.Nombre = "Mariano";
+        // cliente.Edad = 12;
+        // cliente.MostrarDatos();
+
+        // Auto auto = new Auto();
+        // auto.MostrarTipo();
+
+        Cuenta cuenta = new Cuenta();
+        cuenta.Depositar(12.3m);
+        cuenta.Depositar(1m);
+        cuenta.ConsultarSaldo();
+        cuenta.Depositar(-5m);
+        cuenta.ConsultarSaldo();
+        cuenta.Depositar(10m);
+        cuenta.Depositar(11m);
+        cuenta.ConsultarSaldo();
 
     }
 
@@ -489,15 +512,33 @@ class PracticaEjercicios()
 class Persona
     {
         public string Nombre { set; get; }
-        public int Edad { set; get; }
+        // public int Edad { set; get; }
+        
 
-        public Persona(string nombre, int edad)
+        private int edad;
+
+        public int Edad
         {
-            this.Nombre = nombre;
-            this.Edad = edad;
+            get
+            {
+                return edad;
+            }
+            set
+            {
+                if (value >= 0)
+                    edad = value;
+                else
+                    Console.WriteLine("Edad no válida");
+            }
         }
 
-        public void Saludar()
+        public Persona(string nombre, int edad)
+    {
+        this.Nombre = nombre;
+        this.Edad = edad;
+    }
+
+        public virtual void Saludar()
         {
             Console.WriteLine($"Hola madafaka de nombre {this.Nombre} y edad {this.Edad}");
         }
@@ -513,9 +554,95 @@ class Estudiante : Persona
     }
 
     public void Informacion()
+    {
+        Console.WriteLine($"{Matricula} del madafaka con nombre ${Nombre} y edad {Edad}");
+    }
+
+    public override void Saludar()
     { 
-        Console.WriteLine($"{Matricula} del madafaka con nombre ${ Nombre } y edad { Edad }");
+        Console.WriteLine($"Hola estudiante de nombre {this.Nombre} y edad {this.Edad}");
+    }
+    
+}
+
+class Cliente
+{
+
+    private string _nombre;
+    private int _edad;
+
+    public Cliente(string nombre, int edad)
+    {
+        this._nombre = nombre;
+        this._edad = edad;
+    }
+
+    public string Nombre
+    {
+        get { return _nombre; }
+        set { _nombre = value; }
+    }
+
+    public int Edad
+    {
+        get
+        {
+            return _edad;
+        }
+        set
+        {
+            if (value >= 0)
+                _edad = value;
+            else
+                Console.WriteLine("Edad no válida");
+        }
+    }
+
+    public void MostrarDatos()
+    {
+        Console.WriteLine($"Nombre: {_nombre} Edad: {_edad} ");
     }
 }
 
+class Vehiculo
+{
+    private string _tipo;
 
+    public string Tipo
+    {
+        get { return _tipo; }
+        set { _tipo = value; }
+    }
+
+    public virtual void MostrarTipo()
+    {
+        Console.WriteLine($"Es solo un Vehiculo");
+    }
+}
+
+class Auto : Vehiculo
+{
+    public override void MostrarTipo()
+    {
+        Console.WriteLine($"Es un Auto alv");
+    }
+}
+
+class Cuenta
+{
+    private decimal _saldo;
+
+    public void Depositar(decimal deposito)
+    {
+        if (deposito > 0)
+        {
+            this._saldo += deposito;
+        }
+    }
+
+    public void ConsultarSaldo()
+    {
+        Console.WriteLine($"Tu saldo es: {this._saldo}");
+    }
+
+}
