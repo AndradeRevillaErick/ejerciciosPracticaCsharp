@@ -78,16 +78,28 @@ class PracticaEjercicios()
         // Auto auto = new Auto();
         // auto.MostrarTipo();
 
-        Cuenta cuenta = new Cuenta();
-        cuenta.Depositar(12.3m);
-        cuenta.Depositar(1m);
-        cuenta.ConsultarSaldo();
-        cuenta.Depositar(-5m);
-        cuenta.ConsultarSaldo();
-        cuenta.Depositar(10m);
-        cuenta.Depositar(11m);
-        cuenta.ConsultarSaldo();
+        // Cuenta cuenta = new Cuenta();
+        // cuenta.Depositar(12.3m);
+        // cuenta.Depositar(1m);
+        // cuenta.ConsultarSaldo();
+        // cuenta.Depositar(-5m);
+        // cuenta.ConsultarSaldo();
+        // cuenta.Depositar(10m);
+        // cuenta.Depositar(11m);
+        // cuenta.ConsultarSaldo();
 
+        // Console.WriteLine(Dividecero(12, 0));
+
+        // TextoToNumber textoToNumber = new();
+        // textoToNumber.ConvertidorMacizo("doce");
+
+        // TryCatchFinally tryCatchFinally = new();
+        // tryCatchFinally.ProbandoAndo("12");
+        // tryCatchFinally.ProbandoAndo("doce");
+
+        MyException myException = new();
+        myException.ValidaEdad(12);
+        myException.ValidaEdad(21);
     }
 
     static void MayorQueDiez(int numero)
@@ -506,7 +518,18 @@ class PracticaEjercicios()
         Console.WriteLine($"es un {typeof(T).Name} y vale: {valor}");
     }
 
-    
+    static double Dividecero(int a, int b)
+    {
+        try
+        {
+            return a / b;
+        }
+        catch
+        {
+            Console.WriteLine("No puedes dividir entre 0 no manches");
+            return 0;
+        }
+    }
 }
 
 class Persona
@@ -645,4 +668,76 @@ class Cuenta
         Console.WriteLine($"Tu saldo es: {this._saldo}");
     }
 
+}
+
+class TextoToNumber()
+{
+    public void ConvertidorMacizo(string numerito)
+    {
+        try
+        {
+            Console.WriteLine(Int32.Parse(numerito));
+        }
+        catch
+        {
+            Console.WriteLine("Como vas a convertir una letra a numero wey");
+        }
+    }
+}
+
+class TryCatchFinally()
+{
+    public void ProbandoAndo(string numerito)
+    {
+        try
+        {
+            Console.WriteLine(Int32.Parse(numerito));
+        }
+        catch
+        {
+            Console.WriteLine("Como vas a convertir una letra a numero wey");
+        }
+        finally
+        {
+            Console.WriteLine("ALV se ejcuto el finally");
+
+        }
+    }
+}
+
+class EdadMaciza()
+{
+    public void ValidaEdad(int edad)
+    {
+        try
+        {
+            if (edad < 18)
+                throw new Exception("Mamaste por morro");
+
+            Console.WriteLine("todo bien pasale");
+        }
+        catch
+        {
+            Console.WriteLine("Pinshy morro alv");
+        }
+    }
+}
+
+class MyException()
+{
+    public void ValidaEdad(int edad)
+    {
+        try
+        {
+            if (edad < 18)
+                throw new Exception("Mamaste por morro");
+
+            Console.WriteLine("todo bien pasale");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Pinshy morro alv");
+            Console.WriteLine(e);
+        }
+    }
 }
